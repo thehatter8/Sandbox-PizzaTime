@@ -10,12 +10,25 @@
 
 @code
 {
-    // Reference to the WallSlide component that contains the stamina value
-    [Property] WallSlide WallSlideComponent { get; set; }
+    private WallJumpSlide WallJumpComponent;
 
-    // Property to hold the rounded stamina value for display
-    private int RoundedStamina => (int)Math.Round(WallSlideComponent?.Stamina ?? 0f);
+    private int RoundedStamina => (int)Math.Round(WallJumpComponent?.Stamina ?? 0f);
 
-    // Rebuild hash whenever Stamina changes
-    protected override int BuildHash() => System.HashCode.Combine(RoundedStamina);
+    protected override void OnStart()
+    {
+        // Find the WallJumpSlide component on the player at runtime
+        var player = Scene.GetAllComponents<PlayerController>().FirstOrDefault();
+        if (player != null)
+        {
+            WallJumpComponent = player.Components.Get<WallJumpSlide>(FindMode.InSelf);
+        }
+
+        if (WallJumpComponent == null)
+            Log.Warning("WallJump UI: No WallJumpSlide component found on the player!");
+    }
+
+    protected override int BuildHash()
+    {
+        return System.HashCode.Combine(RoundedStamina);
+    }
 }

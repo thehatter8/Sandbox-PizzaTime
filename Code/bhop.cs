@@ -8,8 +8,8 @@ public sealed class BunnyHop : Component
 	public float CoyoteTime { get; set; } = 0.05f;
 	[Property]
 	public float JumpVelocity { get; set; } = 300f;
-	private TimeSince _timeSinceGrounded;
 
+	private TimeSince _timeSinceGrounded;
 	protected override void OnStart()
 	{
 		if ( Controller is null )
@@ -20,7 +20,6 @@ public sealed class BunnyHop : Component
 				Log.Warning( "BunnyHop: No PlayerController found on this GameObject." );
 		}
 	}
-
 	protected override void OnUpdate()
 	{
 		if ( Controller is null )

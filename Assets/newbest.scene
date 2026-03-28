@@ -279,13 +279,14 @@
           "OnComponentUpdate": null
         },
         {
-          "__type": "WallSlide",
-          "__guid": "46592d44-c3b5-46c9-bcee-81e60ce1a126",
+          "__type": "WallJumpSlide",
+          "__guid": "5f8d88bf-b17c-4803-a5a6-cce0d96040b7",
           "__enabled": true,
           "Flags": 0,
+          "AirRegenDelay": 3,
           "Controller": null,
-          "InitialStaminaCost": 10,
           "MaxStamina": 100,
+          "MaxWallJumps": 5,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -294,8 +295,12 @@
           "OnComponentUpdate": null,
           "SlideAcceleration": 40,
           "SlideDownSpeed": 60,
-          "StaminaDrainPerSecond": 60,
-          "StaminaRegenPerSecond": 15,
+          "Stamina": 0,
+          "StaminaDrainPerSecond": 20,
+          "StaminaRegenPerSecond": 25,
+          "WallJumpReleaseDuration": 0.15,
+          "WallJumpUpVelocity": 400,
+          "WallJumpVelocityMultiplier": 200,
           "WallSlideDistance": 10
         }
       ],
@@ -364,7 +369,7 @@
           ],
           "Children": [
             {
-              "__guid": "fd49b9b5-e8ac-4631-a0af-0508982173ec",
+              "__guid": "f7d6ec69-687e-46c7-a20e-7e2cb9a53d40",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
@@ -381,7 +386,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "e9190f12-8b8c-4ceb-909e-cffb14f4c2e9",
+                  "__guid": "73ea05cb-9a21-4749-80a6-e33eb1b12bab",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -433,7 +438,7 @@
               "Children": []
             },
             {
-              "__guid": "45c5b7ab-f628-44b6-bd2f-a288615ce427",
+              "__guid": "74b6e4d2-c34b-4317-84a9-d54e4090a70f",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - black_boxers",
@@ -450,7 +455,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "a1a652c7-fb25-4d92-aefe-e0456bfaa8d8",
+                  "__guid": "98202b69-87ca-48bc-9c35-85364908b4af",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -502,7 +507,7 @@
               "Children": []
             },
             {
-              "__guid": "d6336a6f-24d4-4297-838a-af90d1d542a7",
+              "__guid": "a7921ef9-bb31-4f40-bc92-b922827c3bb3",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - tshirt",
@@ -519,7 +524,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "0ff91182-c27b-4cde-8a9c-3f8d81424a8d",
+                  "__guid": "7aa2d706-d147-4e3e-8fd4-7f9264553aa1",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -571,7 +576,7 @@
               "Children": []
             },
             {
-              "__guid": "e22c0365-bb2e-4a48-bd1f-1a2489ea096f",
+              "__guid": "ddb86f8e-24d0-4c8f-b80f-fb8236baf74a",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - black_boots",
@@ -588,7 +593,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "54f0695c-1736-45f9-a243-df3a7786116a",
+                  "__guid": "dd85730e-042d-43c5-b3ec-99d4b8e3df2a",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -640,7 +645,7 @@
               "Children": []
             },
             {
-              "__guid": "1ccd5926-6eb2-4fe9-a740-4b70faedb806",
+              "__guid": "5d8bc7f2-ec7d-4d95-b247-4f1b6bfe4ff5",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - chefs_apron",
@@ -657,7 +662,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "851a57c3-1b86-42f8-b6dc-24410b201bf3",
+                  "__guid": "169bd521-d932-4308-8457-f7c0fdf004cd",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -709,7 +714,7 @@
               "Children": []
             },
             {
-              "__guid": "160461a3-0c81-4bbd-8a19-de11264e2474",
+              "__guid": "29a1b667-c52a-482b-bfbc-36fdea1f499a",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
@@ -726,7 +731,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "720cea57-c1cb-430d-b5d3-e9cdb7164a62",
+                  "__guid": "142e3717-f482-4282-a35c-d86a7aa8ca11",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -778,7 +783,7 @@
               "Children": []
             },
             {
-              "__guid": "9165bf15-753c-42e0-9559-74c4d4488b7b",
+              "__guid": "6236b8fa-61f2-4891-becb-5237946b7f69",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - rubber_gloves_black",
@@ -795,7 +800,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "90bd8f09-5336-4f39-abe7-41fb3616930f",
+                  "__guid": "98c506c1-b18e-4eb4-a195-c41e1968a0eb",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -1172,7 +1177,7 @@
         },
         {
           "__type": "Sandbox.MovementPanel",
-          "__guid": "7af96dbd-d64b-4b22-8791-6a6673682fc2",
+          "__guid": "7079b27c-5763-4b32-b99c-2276bbfda432",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -1180,13 +1185,7 @@
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "WallSlideComponent": {
-            "_type": "component",
-            "component_id": "46592d44-c3b5-46c9-bcee-81e60ce1a126",
-            "go": "81995639-beaf-447d-bc5c-8f92ce6f8f27",
-            "component_type": "WallSlide"
-          }
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -1333,7 +1332,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "b71459a6-d5c8-42ce-8df3-3670e1c5d906"
+          "$blob": "67ba8f63-7952-4137-b96c-25455cbe42c9"
         }
       }
     }

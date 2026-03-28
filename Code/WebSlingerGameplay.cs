@@ -17,7 +17,6 @@ public sealed class WebSlingerGameplay : Component
 	private bool _finished = false;
 	private GameObject _spawnedPizza;
 	private DeliveryDestination _currentDestination;
-
 	private struct DeliveryDestination
 	{
 		public string Name;
@@ -29,7 +28,6 @@ public sealed class WebSlingerGameplay : Component
 			Location = location;
 		}
 	}
-
 	private static readonly List<Vector3> PizzaSpots = new()
 	{
 		new Vector3( -1135f,  32f,  -10800f ),
@@ -43,7 +41,6 @@ public sealed class WebSlingerGameplay : Component
 		new Vector3( -1135f, -300f, -10800f ),
 		new Vector3( -1135f, -300f, -10800f ),
 	};
-
 	private static readonly List<DeliveryDestination> DeliveryDestinations = new()
 	{
 		new DeliveryDestination( "City Hall",        new Vector3(  500f,  200f, -11036f ) ),
@@ -52,49 +49,40 @@ public sealed class WebSlingerGameplay : Component
 		new DeliveryDestination( "Corner Shop",      new Vector3( -300f,  600f, -11036f ) ),
 		new DeliveryDestination( "Police Station",   new Vector3(  900f, -100f, -11036f ) ),
 	};
-
 	protected override void OnStart()
 	{
 		_startTime = Time.Now;
 		TimeRemaining = Duration;
 	}
-
 	protected override void OnUpdate()
 	{
 		if ( !_started )
 		{
 			if ( Warmup is null || !Warmup.IsFinished ) return;
-
 			_started = true;
 			_startTime = Time.Now;
 			TimeRemaining = Duration;
 			PickPizzaLocation();
 			return;
 		}
-
 		if ( _started && !_finished && _spawnedPizza.IsValid() && Warmup.PizzaPlayer.IsValid() )
 		{
 			float dist = Vector3.DistanceBetween(
 				Warmup.PizzaPlayer.GameObject.WorldPosition,
 				PizzaLocation
 			);
-
 			if ( dist < PickupDistance && !PlayerHasPizza )
 			{
 				PlayerHasPizza = true;
 				var renderer = _spawnedPizza.GetComponent<ModelRenderer>();
 				if ( renderer is not null )
 					renderer.Enabled = false;
-
 				PickDeliveryDestination();
 				Log.Info( "Pizza picked up!" );
 			}
 		}
-
 		if ( _finished ) return;
-
 		TimeRemaining = Duration - (int)(Time.Now - _startTime);
-
 		if ( TimeRemaining <= 0 )
 		{
 			TimeRemaining = 0;
@@ -102,20 +90,16 @@ public sealed class WebSlingerGameplay : Component
 			Log.Info( "Gameplay timer finished!" );
 		}
 	}
-
 	private void PickPizzaLocation()
 	{
 		var spot = PizzaSpots[Game.Random.Int( 0, PizzaSpots.Count - 1 )];
 		PizzaLocation = spot;
-
 		Log.Info( $"Pizza location set to: {PizzaLocation}" );
-
 		if ( PizzaModel is null )
 		{
 			Log.Warning( "No model assigned to PizzaModel!" );
 			return;
 		}
-
 		_spawnedPizza = new GameObject();
 		_spawnedPizza.WorldPosition = PizzaLocation;
 		_spawnedPizza.WorldRotation = Rotation.From( 0f, 0f, 90f );
@@ -125,7 +109,6 @@ public sealed class WebSlingerGameplay : Component
 		renderer.Model = PizzaModel;
 		renderer.RenderOptions.Overlay = true;
 	}
-
 	private void PickDeliveryDestination()
 	{
 		_currentDestination = DeliveryDestinations[Game.Random.Int( 0, DeliveryDestinations.Count - 1 )];
