@@ -21,7 +21,7 @@
           "__type": "Sandbox.PlayerController",
           "__guid": "c333d138-4b9a-477a-9396-b352cda8a47d",
           "__enabled": true,
-          "Flags": 0,
+          "Flags": 512,
           "AccelerationTime": 0,
           "AimStrengthBody": 1,
           "AimStrengthEyes": 1,
@@ -239,7 +239,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "PullStrength": 3000,
+          "PullStrength": 2000,
           "StopDistance": 50
         },
         {
@@ -264,17 +264,39 @@
           "Thickness": 1.5
         },
         {
-          "__type": "ScrollWheelJump",
-          "__guid": "e2df971b-d678-414f-b07e-55ca40214497",
+          "__type": "BunnyHop",
+          "__guid": "10114d1d-c3b8-4d17-8289-c8f50354f07a",
           "__enabled": true,
           "Flags": 0,
-          "JumpStrength": 600,
+          "Controller": null,
+          "CoyoteTime": 0.05,
+          "JumpVelocity": 300,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        },
+        {
+          "__type": "WallSlide",
+          "__guid": "46592d44-c3b5-46c9-bcee-81e60ce1a126",
+          "__enabled": true,
+          "Flags": 0,
+          "Controller": null,
+          "InitialStaminaCost": 10,
+          "MaxStamina": 100,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SlideAcceleration": 40,
+          "SlideDownSpeed": 60,
+          "StaminaDrainPerSecond": 60,
+          "StaminaRegenPerSecond": 15,
+          "WallSlideDistance": 10
         }
       ],
       "Children": [
@@ -342,7 +364,7 @@
           ],
           "Children": [
             {
-              "__guid": "cf43614d-5497-4524-8cef-bfd3e2874739",
+              "__guid": "fd49b9b5-e8ac-4631-a0af-0508982173ec",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - hair.loose.grey",
@@ -359,7 +381,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "617e03c8-0f1f-4efd-80b9-5db2d4709322",
+                  "__guid": "e9190f12-8b8c-4ceb-909e-cffb14f4c2e9",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -411,7 +433,7 @@
               "Children": []
             },
             {
-              "__guid": "6288b3fc-ea38-49a3-8fb7-51693e6d7094",
+              "__guid": "45c5b7ab-f628-44b6-bd2f-a288615ce427",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - black_boxers",
@@ -428,7 +450,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "7c12ccfc-c9bc-4183-8495-393d9ddd9552",
+                  "__guid": "a1a652c7-fb25-4d92-aefe-e0456bfaa8d8",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -480,7 +502,7 @@
               "Children": []
             },
             {
-              "__guid": "66bb043f-f3af-4d20-a39d-c633e44e5323",
+              "__guid": "d6336a6f-24d4-4297-838a-af90d1d542a7",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - tshirt",
@@ -497,7 +519,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "5918ebf3-83b2-4214-b065-6686373d11ae",
+                  "__guid": "0ff91182-c27b-4cde-8a9c-3f8d81424a8d",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -549,7 +571,7 @@
               "Children": []
             },
             {
-              "__guid": "34d71a18-834a-403c-881b-6ce81c82f142",
+              "__guid": "e22c0365-bb2e-4a48-bd1f-1a2489ea096f",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - black_boots",
@@ -566,7 +588,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "1ff92d6c-b454-406e-a09e-89a94dc0a130",
+                  "__guid": "54f0695c-1736-45f9-a243-df3a7786116a",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -618,7 +640,7 @@
               "Children": []
             },
             {
-              "__guid": "e74ccc07-d409-4590-84d0-ed47691105f3",
+              "__guid": "1ccd5926-6eb2-4fe9-a740-4b70faedb806",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - chefs_apron",
@@ -635,7 +657,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "425ebb63-c7b7-47ac-9010-d1705e3d61cd",
+                  "__guid": "851a57c3-1b86-42f8-b6dc-24410b201bf3",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -687,7 +709,7 @@
               "Children": []
             },
             {
-              "__guid": "71214e65-fa5e-4a56-93c3-addca9c0d885",
+              "__guid": "160461a3-0c81-4bbd-8a19-de11264e2474",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - nerdy_glasses",
@@ -704,7 +726,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "407778dc-44bc-44a3-a936-e784c2224cee",
+                  "__guid": "720cea57-c1cb-430d-b5d3-e9cdb7164a62",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -756,7 +778,7 @@
               "Children": []
             },
             {
-              "__guid": "69fa7f2e-21d8-49bf-a80a-38ce0877c1e2",
+              "__guid": "9165bf15-753c-42e0-9559-74c4d4488b7b",
               "__version": 2,
               "Flags": 0,
               "Name": "Clothing - rubber_gloves_black",
@@ -773,7 +795,7 @@
               "Components": [
                 {
                   "__type": "Sandbox.SkinnedModelRenderer",
-                  "__guid": "bae2acab-9429-4c0b-934a-c0b4434ad352",
+                  "__guid": "90bd8f09-5336-4f39-abe7-41fb3616930f",
                   "__enabled": true,
                   "Flags": 0,
                   "AnimationGraph": null,
@@ -1115,6 +1137,61 @@
       "Children": []
     },
     {
+      "__guid": "bdb0dc0f-40d3-4162-b877-cec51eb5e39f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "MovementUIRenderer",
+      "Position": "-1713.251,-360.0771,-10969.42",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "78e2eca7-668d-4311-8e10-4f337290b791",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": null,
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.MovementPanel",
+          "__guid": "7af96dbd-d64b-4b22-8791-6a6673682fc2",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "WallSlideComponent": {
+            "_type": "component",
+            "component_id": "46592d44-c3b5-46c9-bcee-81e60ce1a126",
+            "go": "81995639-beaf-447d-bc5c-8f92ce6f8f27",
+            "component_type": "WallSlide"
+          }
+        }
+      ],
+      "Children": []
+    },
+    {
       "__guid": "7430e7b8-4c91-4de7-991d-134217983dcc",
       "__version": 2,
       "Flags": 0,
@@ -1195,7 +1272,7 @@
       "Name": "PizzaRenderer",
       "Position": "-1136.941,509.5714,-10916.86",
       "Rotation": "0.7071068,0,0,0.7071068",
-      "Scale": "1,1,1",
+      "Scale": "2,2,2",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -1256,7 +1333,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "6e42f540-d9fb-42aa-8a8c-3dbdba493918"
+          "$blob": "b71459a6-d5c8-42ce-8df3-3670e1c5d906"
         }
       }
     }

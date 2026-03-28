@@ -2,8 +2,8 @@ using Sandbox;
 
 public sealed class WebSlinger : Component
 {
-	[Property] public float MaxDistance { get; set; } = 5000f;
-	[Property] public float PullStrength { get; set; } = 3000f;
+	[Property] public float MaxDistance { get; set; } = 3500;
+	[Property] public float PullStrength { get; set; } = 2000;
 	[Property] public float StopDistance { get; set; } = 50f;
 	[Property] public float BoostMultiplier { get; set; } = 2f;
 	[Property] public float BoostDuration { get; set; } = 0.5f;

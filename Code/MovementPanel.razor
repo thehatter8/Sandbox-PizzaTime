@@ -1,0 +1,21 @@
+@using Sandbox;
+@using Sandbox.UI;
+@using System;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    <div class="stamina">Wallride Stamina: @RoundedStamina</div>
+</root>
+
+@code
+{
+    // Reference to the WallSlide component that contains the stamina value
+    [Property] WallSlide WallSlideComponent { get; set; }
+
+    // Property to hold the rounded stamina value for display
+    private int RoundedStamina => (int)Math.Round(WallSlideComponent?.Stamina ?? 0f);
+
+    // Rebuild hash whenever Stamina changes
+    protected override int BuildHash() => System.HashCode.Combine(RoundedStamina);
+}
