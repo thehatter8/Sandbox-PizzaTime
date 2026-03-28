@@ -60,7 +60,8 @@ public sealed class WebSlingerWarmup : Component
 				Log.Info( $"Pizza Time! {PizzaPlayer.GameObject.Name} has been picked!" );
 				ShowPizzaText = true;
 				_postPickTimer = 5f;
-				Sound.Play( "pizzatime", 0f );
+				//Sound.Play( PizzaSound, PizzaPlayer.WorldPosition );
+				Sound.Play( PizzaSound );
 
 			}
 		}

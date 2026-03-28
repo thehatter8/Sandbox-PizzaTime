@@ -4,6 +4,8 @@ GameplayTimer {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	font-family: Poppins;
+	font-size: 48px;
 
 	.GameplayTimerUI {
 		position: absolute;
@@ -14,8 +16,8 @@ GameplayTimer {
 
 	.GameplayPizzaAlert {
 		position: absolute;
-		left: 10%;
-		bottom: 10%;
+		left: 50%;
+		bottom: 5%;
 		transform: translateX( -50% );
 	}
 }
