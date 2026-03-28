@@ -1,0 +1,14 @@
+{
+  "Title": "Crosshair Maker",
+  "Type": "library",
+  "Org": "copper",
+  "Ident": "crosshairmaker",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Mounts": null,
+  "IsStandaloneOnly": false,
+  "Metadata": {}
+}

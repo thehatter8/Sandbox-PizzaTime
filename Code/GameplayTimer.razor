@@ -1,0 +1,32 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    @if ( Gameplay is null || !Gameplay.IsStarted ) { return; }
+
+    <div class="GameplayTimerUI">
+        @if ( Gameplay.TimeRemaining > 0 )
+        {
+            <p>Time Remaining: @Gameplay.TimeRemaining</p>
+        }
+    </div>
+
+    <div class="GameplayPizzaAlert">
+        @if ( Gameplay.PlayerHasPizza )
+        {
+            <p>You have the pizza! Take it to the destination!</p>
+        }
+    </div>
+</root>
+
+@code
+{
+    [Property] WebSlingerGameplay Gameplay { get; set; }
+
+    protected override int BuildHash()
+    {
+        return System.HashCode.Combine( Gameplay?.TimeRemaining, Gameplay?.PlayerHasPizza, Gameplay?.IsStarted );
+    }
+}

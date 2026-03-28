@@ -1,0 +1,21 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+  </Configurations>
+  <Project Path="Code/pizzatime_new.csproj" />
+  <Project Path="Editor/pizzatime_new.editor.csproj" />
+  <Folder Name="/Addons/">
+    <Project Path="D:/Program Files/steamapps/common/sbox/addons/base/code/Base Library.csproj" />
+  </Folder>
+  <Folder Name="/Libraries/">
+    <Project Path="Libraries/copper.crosshairmaker/Code/crosshairmaker.csproj" />
+    <Project Path="Libraries/copper.crosshairmaker/Editor/crosshairmaker.editor.csproj" />
+  </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="D:/Program Files/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj" />
+    <Project Path="D:/Program Files/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj" />
+    <Project Path="D:/Program Files/steamapps/common/sbox/editor/Hammer/Code/hammer.csproj" />
+    <Project Path="D:/Program Files/steamapps/common/sbox/editor/MovieMaker/Code/moviemaker.csproj" />
+    <Project Path="D:/Program Files/steamapps/common/sbox/editor/ShaderGraph/Code/shadergraph.csproj" />
+  </Folder>
+</Solution>

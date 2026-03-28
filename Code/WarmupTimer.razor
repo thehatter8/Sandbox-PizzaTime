@@ -1,0 +1,27 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class=WarmupUIPanel>
+	@if ( Warm.ShowPizzaText )
+	{
+	    <p>Pizza Time! @Warm.PizzaPlayer.GameObject.Name has been picked!</p>
+	}
+	else if ( Warm.TimeRemaining > 0 )
+	{
+	   <p>Warmup Time Remaining: @Warm.TimeRemaining</p>
+	}
+	</div>
+</root>
+
+@code
+{
+	[Property] WebSlingerWarmup Warm { get; set; }
+
+	protected override int BuildHash()
+	{
+		return System.HashCode.Combine( Warm.TimeRemaining, Warm.PizzaPlayer, Warm.ShowPizzaText );
+	}
+}
