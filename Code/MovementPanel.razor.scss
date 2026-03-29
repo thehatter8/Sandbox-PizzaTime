@@ -6,6 +6,8 @@ MovementPanel {
 	bottom: 0;
 	font-family: Poppins;
 	font-size: 36px;
+	font-weight: bold;
+	text-stroke: 4px, #ffffff;
 
 	.stamina {
 		position: absolute;
