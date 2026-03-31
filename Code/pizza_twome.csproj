@@ -3,8 +3,8 @@
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<AssemblyName>pizzatime_new</AssemblyName>
-		<PackageId>pizzatime_new</PackageId>
+		<AssemblyName>pizza_twome</AssemblyName>
+		<PackageId>pizza_twome</PackageId>
 		<LangVersion>14</LangVersion>
 		<NoWarn>1701;1702;1591;</NoWarn>
 		<WarningsAsErrors></WarningsAsErrors>
@@ -13,7 +13,7 @@
 		<DefineConstants>SANDBOX</DefineConstants>
 		<AllowUnsafeBlocks>False</AllowUnsafeBlocks>
 		<OutputPath>../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/.vs/output/</OutputPath>
-		<DocumentationFile>../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/.vs/output/pizzatime_new.xml</DocumentationFile>
+		<DocumentationFile>../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/.vs/output/pizza_twome.xml</DocumentationFile>
 		<RootNamespace>Sandbox</RootNamespace>
 		<Nullable>disable</Nullable>
 		<DefaultItemExcludes>$(DefaultItemExcludes);**/editor/**;**/unittest/**</DefaultItemExcludes>

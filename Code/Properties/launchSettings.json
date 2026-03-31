@@ -2,8 +2,8 @@
   "profiles": {
     "Editor": {
       "commandName": "Executable",
-      "executablePath": "D:/Program Files/steamapps/common/sbox/sbox-dev.exe",
-      "commandLineArgs": "-project \u0022c:\\users\\ej\\documents\\s\u0026box projects\\pizzatime_new\\pizzatime_new.sbproj\u0022"
+      "executablePath": "../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox/sbox-dev.exe",
+      "commandLineArgs": "-project \u0022C:\\Users\\CodyAdmin\\Documents\\s\u0026box projects\\pizza_twome\\pizzatime_new.sbproj\u0022"
     }
   }
 }

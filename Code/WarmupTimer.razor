@@ -7,11 +7,11 @@
 	<div class=WarmupUIPanel>
 	@if ( Warm.ShowPizzaText )
 	{
-	    <p>Pizza Time! @Warm.PizzaPlayer.GameObject.Name has been picked!</p>
+	    <p>Pizza Time! Take the pizza to the customer!</p>
 	}
 	else if ( Warm.TimeRemaining > 0 )
 	{
-	   <p>Warmup Time Remaining: @Warm.TimeRemaining</p>
+	   <p>Placing Pizza in : @Warm.TimeRemaining</p>
 	}
 	</div>
 </root>
@@ -19,7 +19,7 @@
 @code
 {
 	[Property] WebSlingerWarmup Warm { get; set; }
-
+	//<p>Pizza Time! @Warm.PizzaPlayer.GameObject.Name has been picked!</p>
 	protected override int BuildHash()
 	{
 		return System.HashCode.Combine( Warm.TimeRemaining, Warm.PizzaPlayer, Warm.ShowPizzaText );

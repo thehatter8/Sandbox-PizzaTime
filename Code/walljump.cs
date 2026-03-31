@@ -100,7 +100,7 @@ public sealed class WallJumpSlide : Component
 		else if ( IsValidTrace( traceBackward ) ) validTrace = traceBackward;
 		else if ( IsValidTrace( traceRight ) ) validTrace = traceRight;
 		else if ( IsValidTrace( traceLeft ) ) validTrace = traceLeft;
-		bool shiftHeld = Input.Down( "Run" );
+		bool shiftHeld = Input.Down( "attack2" );
 		bool wallFound = validTrace.Hit;
 		if ( wallFound && shiftHeld && Stamina > 0f )
 		{
